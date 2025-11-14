@@ -1,15 +1,15 @@
 from . import config as cf
-from .helpers import wordGenerator, masking, maskUpdate
+from .helpers import wordGenerator, masking, maskUpdate, attemptsUpdate
 
 
 def run_game():
     word = wordGenerator()
     mask = masking(word)
-    attempts = 0
 
     print(" ".join(mask))
+    print(f"Remaining attempts: {cf.MAX_ATTEMPTS}")
 
-    while attempts < cf.MAX_ATTEMPTS:
+    while cf.MAX_ATTEMPTS > 0:
         guess = input("Guess a letter or a word: ")
 
         if len(guess) == len(word):
@@ -18,7 +18,7 @@ def run_game():
                 return
             else:
                 print("Wrong word")
-                attempts += 1
+                attemptsUpdate()
                 continue
 
         if len(guess) != 1:
@@ -35,6 +35,6 @@ def run_game():
             print("You win!")
             return
         
-        attempts += 1
+        attemptsUpdate()
     
     print(f"You lost! The word was {word}")

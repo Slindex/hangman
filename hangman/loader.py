@@ -13,5 +13,3 @@ def load_words():
         return []
     
     return words
-
-print(load_words())

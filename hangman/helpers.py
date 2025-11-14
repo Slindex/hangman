@@ -3,7 +3,7 @@ from .loader import load_words
 from . import config as cf
 
 
-def wordGenerator():
+def wordGenerator() -> str:
     words = load_words()
 
     if len(words) == 0:
@@ -25,3 +25,7 @@ def maskUpdate(word: str, mask: list[str], guess: str):
     for i in range(len(word)):
         if word[i] == guess:
             mask[i] = guess
+
+def attemptsUpdate():
+    cf.MAX_ATTEMPTS -= 1
+    print(f"Remaining Attempts: {cf.MAX_ATTEMPTS}")
