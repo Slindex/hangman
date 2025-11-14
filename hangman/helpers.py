@@ -4,7 +4,8 @@ from . import config as cf
 
 
 def wordGenerator() -> str:
-    words = load_words()
+    theme = themeSelector()
+    words = load_words(theme)
 
     if len(words) == 0:
         raise ValueError("No hay palabras disponibles para jugar")
@@ -29,3 +30,19 @@ def maskUpdate(word: str, mask: list[str], guess: str):
 def attemptsUpdate():
     cf.MAX_ATTEMPTS -= 1
     print(f"Remaining Attempts: {cf.MAX_ATTEMPTS}")
+
+def themeSelector() -> str:
+    print("\nChoose a theme:\n")
+    for key, value in cf.THEMES.items():
+        print(f"{key}: {value[:-4]}")
+    print()
+
+    choice = input("Option:")
+
+    if choice not in cf.THEMES:
+        raise ValueError(f"Choose a valid option: {cf.THEMES.keys()}")
+
+    theme = cf.THEMES[choice]
+    
+    return theme
+    
