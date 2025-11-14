@@ -1,9 +1,15 @@
 import random as rd
+from .loader import load_words
 from . import config as cf
 
 
 def wordGenerator():
-    return rd.choice(cf.WORDS)
+    words = load_words()
+
+    if len(words) == 0:
+        raise ValueError("No hay palabras disponibles para jugar")
+
+    return rd.choice(words)
 
 def masking(word: str) -> list[str]:
     mask = [*word]

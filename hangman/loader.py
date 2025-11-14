@@ -10,7 +10,7 @@ def load_words():
             words = [line.strip() for line in f]
     except FileNotFoundError:
         print(f"No se encuentra el archivo words.txt en {os.path.dirname(WORDS_PATH)}")
-        return
+        return []
     
     return words
 
