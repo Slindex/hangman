@@ -1,5 +1,5 @@
 import random as rd
-import config as cf
+from . import config as cf
 
 
 def wordGenerator():
