@@ -27,6 +27,7 @@ def main():
 
         if guess in word:
             maskUpdate(word, mask, guess)
+            print(" ".join(mask))
         else:
             print("Wrong char")
         

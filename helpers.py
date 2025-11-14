@@ -19,5 +19,3 @@ def maskUpdate(word: str, mask: list[str], guess: str):
     for i in range(len(word)):
         if word[i] == guess:
             mask[i] = guess
-    
-    print(" ".join(mask))
