@@ -1,7 +1,7 @@
 import random as rd
 from .loader import load_words
 from . import config as cf
-from colorama import Fore, Style
+from colorama import Style
 
 
 def wordGenerator() -> str:
@@ -64,13 +64,7 @@ def difficultySelector() -> float:
     return mask_percent
 
 def printColored(text: str, color: str):
-    colors = {
-        "green": Fore.GREEN,
-        "yellow": Fore.YELLOW,
-        "red": Fore.RED,
-    }
-
-    if color not in colors:
+    if color not in cf.COLORS:
         raise ValueError(f"Invalid color {color}")
 
-    print(f"{colors[color] + text + Style.RESET_ALL}")
+    print(f"{cf.COLORS[color] + text + Style.RESET_ALL}")

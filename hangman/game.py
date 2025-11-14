@@ -34,6 +34,8 @@ def run_game():
 
         if len(guess) != 1:
             printColored("Enter only ONE letter", "yellow")
+            print()
+            print("Remaining attempts:", cf.MAX_ATTEMPTS)
             continue
 
         if guess in word:
@@ -41,7 +43,7 @@ def run_game():
             print(" ".join(mask))
             printColored(f"Right Char!: {guess}", "green")
         else:
-            printColored("Wrong char", "red")
+            printColored(f"Wrong char: {guess}", "red")
         
         if "".join(mask) == word:
             printColored("You win!", "green")
