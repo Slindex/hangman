@@ -1,13 +1,13 @@
 import random as rd
-from config import *
+import config as cf
 
 
 def wordGenerator():
-    return rd.choice(WORDS)
+    return rd.choice(cf.WORDS)
 
 def masking(word: str) -> list:
     mask = [*word]
-    num_chars = int(len(mask) * HIDDEN_RATIO)
+    num_chars = int(len(mask) * cf.HIDDEN_RATIO)
     hidden_chars = rd.sample(range(len(mask)), num_chars)
 
     for i in hidden_chars:
@@ -30,7 +30,7 @@ def main():
 
     print(" ".join(mask))
 
-    while attempts < MAX_ATTEMPTS:
+    while attempts < cf.MAX_ATTEMPTS:
         guess = input("Guess a letter or a word: ")
 
         if len(guess) == len(word):
