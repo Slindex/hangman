@@ -1,6 +1,7 @@
 import random as rd
 from .loader import load_words
 from . import config as cf
+from colorama import Fore, Style
 
 
 def wordGenerator() -> str:
@@ -12,9 +13,9 @@ def wordGenerator() -> str:
 
     return rd.choice(words)
 
-def masking(word: str) -> list[str]:
+def masking(word: str, percent: float) -> list[str]:
     mask = [*word]
-    num_chars = int(len(mask) * cf.HIDDEN_RATIO)
+    num_chars = int(len(mask) * percent)
     hidden_chars = rd.sample(range(len(mask)), num_chars)
 
     for i in hidden_chars:
@@ -29,6 +30,7 @@ def maskUpdate(word: str, mask: list[str], guess: str):
 
 def attemptsUpdate():
     cf.MAX_ATTEMPTS -= 1
+    print()
     print(f"Remaining Attempts: {cf.MAX_ATTEMPTS}")
 
 def themeSelector() -> str:
@@ -37,12 +39,38 @@ def themeSelector() -> str:
         print(f"{key}: {value[:-4]}")
     print()
 
-    choice = input("Option:")
+    choice = input("Option:").strip()
 
     if choice not in cf.THEMES:
-        raise ValueError(f"Choose a valid option: {cf.THEMES.keys()}")
+        raise ValueError(f"Choose a valid option: {list(cf.THEMES.keys())}")
 
     theme = cf.THEMES[choice]
     
     return theme
+
+def difficultySelector() -> float:
+    print("\nChoose a difficulty\n")
+    for key, value in cf.DIFFICULTY.items():
+        print(f"{key}: {value['name']}")
+    print()
+
+    choice = input("Option:").strip()
+
+    if choice not in cf.DIFFICULTY:
+        raise ValueError(f"Choose a valid option: {list(cf.DIFFICULTY.keys())}")
     
+    mask_percent = cf.DIFFICULTY[choice]['percent']
+
+    return mask_percent
+
+def printColored(text: str, color: str):
+    colors = {
+        "green": Fore.GREEN,
+        "yellow": Fore.YELLOW,
+        "red": Fore.RED,
+    }
+
+    if color not in colors:
+        raise ValueError(f"Invalid color {color}")
+
+    print(f"{colors[color] + text + Style.RESET_ALL}")

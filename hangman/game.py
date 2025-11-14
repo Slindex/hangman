@@ -1,40 +1,52 @@
 from . import config as cf
-from .helpers import wordGenerator, masking, maskUpdate, attemptsUpdate
+from .helpers import (
+    wordGenerator,
+    difficultySelector,
+    masking,
+    attemptsUpdate,
+    maskUpdate,
+    printColored
+)
 
 
 def run_game():
     word = wordGenerator()
-    mask = masking(word)
+    mask_percent = difficultySelector()
+    mask = masking(word, mask_percent)
 
+    print()
     print(" ".join(mask))
+    print()
     print(f"Remaining attempts: {cf.MAX_ATTEMPTS}")
 
     while cf.MAX_ATTEMPTS > 0:
         guess = input("Guess a letter or a word: ")
+        print()
 
         if len(guess) == len(word):
             if guess == word:
-                print("You win!")
+                printColored("You win!", "green")
                 return
             else:
-                print("Wrong word")
+                printColored("Wrong word", "red")
                 attemptsUpdate()
                 continue
 
         if len(guess) != 1:
-            print("Enter only ONE letter")
+            printColored("Enter only ONE letter", "yellow")
             continue
 
         if guess in word:
             maskUpdate(word, mask, guess)
             print(" ".join(mask))
+            printColored(f"Right Char!: {guess}", "green")
         else:
-            print("Wrong char")
+            printColored("Wrong char", "red")
         
         if "".join(mask) == word:
-            print("You win!")
+            printColored("You win!", "green")
             return
         
         attemptsUpdate()
-    
-    print(f"You lost! The word was {word}")
+
+    printColored(f"You lost! The word was {word}", "red")
