@@ -3,15 +3,14 @@ import requests
 import json
 from datetime import datetime
 from .cache import caching
+from . import config as cf
 
-
-BASE_DIR = os.path.dirname(__file__)
 
 def load_words(theme: str):
     if theme == "api-pokemon":
         return load_pokemon_api()
     
-    FILE_PATH = os.path.join(BASE_DIR, "data", theme)
+    FILE_PATH = os.path.join(cf.BASE_DIR, "data", theme)
 
     try:
         with open(FILE_PATH, "r", encoding="utf-8") as f:
@@ -24,7 +23,7 @@ def load_words(theme: str):
 
 def load_pokemon_api(limit=200) -> list[str]:
     FILE_NAME = "pokemon.json"
-    FILE_PATH = os.path.join(BASE_DIR, "data", "cache", FILE_NAME)
+    FILE_PATH = os.path.join(cf.CACHE_PATH, FILE_NAME)
 
     with open(FILE_PATH, "r", encoding="utf-8") as f:
         dct = json.load(f)
@@ -33,14 +32,14 @@ def load_pokemon_api(limit=200) -> list[str]:
     current_date = datetime.now()
     hours = (current_date - last_update).total_seconds() / 3600
 
-    if hours <= 24:
+    if hours <= cf.CACHE_EXPIRE_HOURS:
         return dct['data']
 
     url = f"https://pokeapi.co/api/v2/pokemon?limit={limit}"
     response = requests.get(url)
     response.raise_for_status()
     data = response.json()['results']
-    names = [dct['name'] for dct in data]
+    names = [item['name'] for item in data]
 
     caching(names, FILE_NAME)
     

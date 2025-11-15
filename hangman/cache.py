@@ -4,10 +4,8 @@ from . import config as cf
 from datetime import datetime
 
 
-BASE_DIR = os.path.dirname(__file__)
-
 def caching(data: list[str], file_name: str):
-    FILE_PATH = os.path.join(BASE_DIR, "data", "cache", file_name)
+    FILE_PATH = os.path.join(cf.CACHE_PATH, file_name)
 
     with open(FILE_PATH, "r", encoding="utf-8") as f:
         dct = json.load(f)
