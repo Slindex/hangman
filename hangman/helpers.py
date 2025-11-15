@@ -36,7 +36,7 @@ def attemptsUpdate():
 def themeSelector() -> str:
     print("\nChoose a theme:\n")
     for key, value in cf.THEMES.items():
-        print(f"{key}: {value[:-4]}")
+        print(f"{key}: {value.replace(".txt", "")}")
     print()
 
     choice = input("Option:").strip()
