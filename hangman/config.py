@@ -8,6 +8,7 @@ THEMES = {
     "2": "items.txt",
     "3": "teams.txt",
     "4": "api-pokemon",
+    "5": "countries.txt",
 }
 DIFFICULTY = {
     "1": {"name": "Easy", "percent": 0.3},
