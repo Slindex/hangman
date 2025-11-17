@@ -70,4 +70,10 @@ def printColored(text: str, color: str):
 
 def askNewGame():
     new_game = input("Play again? (y/n)").strip().lower()
+    options = ("y", "n")
+
+    if new_game not in options:
+        print("Please select a valid option (y/n)")
+        return askNewGame()
+
     return new_game
