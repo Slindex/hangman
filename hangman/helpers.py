@@ -4,8 +4,7 @@ from . import config as cf
 from colorama import Style
 
 
-def wordGenerator() -> str:
-    theme = themeSelector()
+def wordGenerator(theme: str) -> str:
     words = load_words(theme)
 
     if len(words) == 0:
@@ -68,3 +67,7 @@ def printColored(text: str, color: str):
         raise ValueError(f"Invalid color {color}")
 
     print(f"{cf.COLORS[color] + text + Style.RESET_ALL}")
+
+def askNewGame():
+    new_game = input("Play again? (y/n)").strip().lower()
+    return new_game
