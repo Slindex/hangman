@@ -33,6 +33,7 @@ def load_pokemon_api(limit=200) -> list[str]:
     hours = (current_date - last_update).total_seconds() / 3600
 
     if hours <= cf.CACHE_EXPIRE_HOURS:
+        print("Retrieved from cache")
         return dct['data']
 
     url = f"https://pokeapi.co/api/v2/pokemon?limit={limit}"
@@ -41,6 +42,7 @@ def load_pokemon_api(limit=200) -> list[str]:
     data = response.json()['results']
     names = [item['name'] for item in data]
 
+    print("Caching API data")
     caching(names, FILE_NAME)
     
     return names

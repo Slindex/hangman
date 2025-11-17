@@ -1,0 +1,194 @@
+kabul
+tirana
+argel
+andorra la vieja
+luanda
+saint johns
+buenos aires
+erevan
+canberra
+viena
+baku
+nasau
+manama
+daca
+bridgetown
+minsk
+bruselas
+belmopan
+porto novo
+thimphu
+sucre
+sarajevo
+gaborone
+brasilia
+bandar seri begawan
+sofia
+ouagadougou
+gitega
+praia
+nom pen
+yaounde
+ottawa
+bangui
+yamena
+santiago
+pekin
+bogota
+moroni
+brazzaville
+san jose
+yamusukro
+zagreb
+la habana
+nicosia
+praga
+kinshasa
+copenhague
+yibuti
+roseau
+santo domingo
+quito
+el cairo
+san salvador
+malabo
+asmara
+tallin
+mbabane
+adis abeba
+suva
+helsinki
+paris
+libreville
+banjul
+tiflis
+berlin
+acra
+atenas
+saint georges
+ciudad de guatemala
+conakri
+bissau
+georgetown
+puerto principe
+tegucigalpa
+budapest
+reikiavik
+nueva delhi
+yakarta
+teheran
+bagdad
+dublin
+jerusalen (forma administrativa reclamada; muchos paises usan tel aviv)
+roma
+kingston
+tokio
+amman
+nursultan (astana)
+nairobi
+tarawa sur
+ciudad de kuwait
+bishkek
+vientiane
+riga
+beirut
+maseru
+monrovia
+tripoli
+vaduz
+vilna
+luxemburgo
+antananarivo
+lilongue
+kuala lumpur
+male
+bamako
+la valeta
+majuro
+nuakchot
+port louis
+ciudad de mexico
+palikir
+chisinau
+monaco
+ulan bator
+podgorica
+rabat
+maputo
+naipyido
+windhoek
+yaren (nauru no tiene capital oficial, esta es sede de gobierno)
+katmandu
+amsterdam
+wellington
+managua
+niamey
+abuya
+pyongyang
+skopie
+oslo
+muscate
+islamabad
+ngerulmud
+ciudad de panama
+port moresby
+asuncion
+lima
+manila
+varsovia
+lisboa
+doha
+bucarest
+moscu
+kigali
+basseterre
+castries
+kingstown
+apia
+san marino
+santo tome
+riad
+dakar
+belgrado
+victoria
+freetown
+singapur
+bratislava
+liubliana
+honiara
+mogadiscio
+ciudad del cabo (administrativa)
+seul
+juba
+madrid
+colombo
+jartum
+paramaribo
+estocolmo
+berna
+Damasco
+dusambe
+dodoma
+bangkok
+dili
+lome
+nuku alofa
+puerto espana
+tunez
+ankara
+ashgabat
+funafuti
+kampala
+kiev
+abu dabi
+londres
+washington dc
+montevideo
+tashkent
+port vila
+ciudad del vaticano
+caracas
+hanoi
+saná
+lusaka
+harare
