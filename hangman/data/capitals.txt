@@ -79,7 +79,7 @@ yakarta
 teheran
 bagdad
 dublin
-jerusalen (forma administrativa reclamada; muchos paises usan tel aviv)
+jerusalen
 roma
 kingston
 tokio
@@ -157,7 +157,7 @@ bratislava
 liubliana
 honiara
 mogadiscio
-ciudad del cabo (administrativa)
+ciudad del cabo
 seul
 juba
 madrid

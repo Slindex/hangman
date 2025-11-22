@@ -6,7 +6,7 @@ from .cache import caching
 from . import config as cf
 
 
-def load_words(theme: str):
+def load_words(theme: str) -> list[str]:
     if theme == "api-pokemon":
         return load_pokemon_api()
     

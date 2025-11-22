@@ -1,0 +1,237 @@
+perro
+gato
+caballo
+vaca
+cerdo
+oveja
+cabra
+pollo
+pato
+ganso
+pavo
+burro
+camello
+dromedario
+llama
+alpaca
+conejo
+hamster
+raton
+rata
+ardilla
+erizo
+topo
+murcielago
+zorro
+lobo
+coyote
+hiena
+leon
+tigre
+guepardo
+jaguar
+puma
+leopardo
+pantera
+oso
+oso panda
+oso polar
+koala
+canguro
+wallaby
+dingo
+ornitorrinco
+perezoso
+armadillo
+mapache
+zorrillo
+nutria
+castor
+alce
+reno
+ciervo
+venado
+antilope
+bisonte
+bufalo
+hipopotamo
+rinoceronte
+elefante
+jirafa
+cebra
+mono
+chimpance
+gorila
+orangutan
+mandril
+lemur
+babuino
+suricata
+mangosta
+foca
+morsa
+leon marino
+delfin
+ballena
+orca
+tiburon
+tiburon blanco
+manta raya
+piraña
+atun
+salmon
+trucha
+bacalao
+pez payaso
+pez globo
+pez espada
+caballito de mar
+medusa
+pulpo
+calamar
+cangrejo
+langosta
+gamba
+camaron
+almeja
+ostra
+caracol
+babosa
+mariposa
+polilla
+abeja
+avispa
+hormiga
+termitas
+escarabajo
+mariquita
+libelula
+mosquito
+mosca
+saltamontes
+grillo
+cucaracha
+mantis religiosa
+luciérnaga (sin acento) luciernaga
+araña
+tarantula
+escorpion
+ciempiés
+milpies
+serpiente
+cobra
+piton
+boa
+anaconda
+vibora
+lagarto
+iguana
+camaleon
+gecko
+cocodrilo
+aligator
+tortuga
+galapago
+rana
+sapo
+triton
+salamandra
+avestruz
+emu
+kiwi
+cisne
+flamenco
+ibis
+garza
+pelicano
+gaviota
+aguila
+halcon
+buitre
+condor
+paloma
+tortola
+cuervo
+corneja
+urraca
+pavo real
+quetzal
+colibri
+canario
+perico
+loro
+guacamayo
+tucan
+pinguino
+gallo
+gallina
+cuye
+huron
+tejon
+coyote
+zorro artico
+caracal
+serval
+yak
+bufalo africano
+antilocapra
+okapi
+tapir
+pecari
+coati
+kudu
+eland
+goral
+saiga
+puma concolor (puma ya esta, este es variacion)
+nutria marina
+narval
+beluga
+mariposa monarca
+abejorro
+cigarra
+gorgojo
+escorpion emperador
+tortuga marina
+anguila
+pez leon
+pez piedra
+pez betta
+pez dorado
+sardina
+arenque
+raton topo
+hiena moteada
+hiena rayada
+pangolin
+kinkajou
+marmota
+huron negro
+lemur de cola anillada
+mosquito tigre
+mantarraya diablo
+garza real
+ibis sagrado
+paloma bravia
+picozapato
+calao
+periquito australiano
+martin pescador
+albatros
+petrel
+gato montes
+lince
+gloton
+carpincho
+chinchilla
+paca
+aguti
+mono ardilla
+mono tití
+mono capuchino
+mono araña
+dorado
+guppy
+tilapia
+carpa
+pez koi

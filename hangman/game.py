@@ -1,4 +1,6 @@
+import random as rd
 from . import config as cf
+from .loader import load_words
 from .helpers import (
     themeSelector,
     wordGenerator,
@@ -14,20 +16,27 @@ from .helpers import (
 def run_game():
     theme = themeSelector()
     mask_percent = difficultySelector()
+    words = load_words(theme)
 
-    gameLoop(theme, mask_percent)
+    gameLoop(theme, mask_percent, words)
 
     while askNewGame() == "y":
-        gameLoop(theme, mask_percent)
+        gameLoop(theme, mask_percent, words)
     
     print()
     print("Thanks for playing!")
 
 
-def gameLoop(theme: str, mask_percent: float):
-    word = wordGenerator(theme)
+def gameLoop(theme: str, mask_percent: float, words: list[str]):
+    word = rd.choice(words)
     mask = masking(word, mask_percent)
     remaining_attempts = cf.MAX_ATTEMPTS
+
+    if "".join(mask) == word:
+        words.remove(word)
+        printColored("You win!", "green")
+        print()
+        return
 
     print()
     print(" ".join(mask))
@@ -40,6 +49,7 @@ def gameLoop(theme: str, mask_percent: float):
 
         if len(guess) == len(word):
             if guess == word:
+                words.remove(word)
                 printColored("You win!", "green")
                 print()
                 return
@@ -56,13 +66,9 @@ def gameLoop(theme: str, mask_percent: float):
             maskUpdate(word, mask, guess)
             print(" ".join(mask))
             printColored(f"Right Char!: {guess}", "green")
+            continue
         else:
             printColored(f"Wrong char: {guess}", "red")
-        
-        if "".join(mask) == word:
-            printColored("You win!", "green")
-            print()
-            return
         
         remaining_attempts -= 1
     

@@ -10,6 +10,8 @@ THEMES = {
     "4": "api-pokemon",
     "5": "countries.txt",
     "6": "capitals.txt",
+    "7": "col_cities.txt",
+    "8": "animals.txt",
 }
 DIFFICULTY = {
     "1": {"name": "Easy", "percent": 0.3},
